@@ -10,7 +10,7 @@ const projects = [
         image: "/projects/prj1.png",
         tags: ["Cisco Packet Tracer", "Wireshark"],
         skills: ["VLANs", "EIGRP", "BGP", "HSRP", "ACLs", "Redundancy"],
-        githubUrl: "#",
+        githubUrl: "https://github.com/Dune-Wid/WCPA-Enterprise-Network/tree/main",
     },
 
     {
