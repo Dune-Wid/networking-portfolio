@@ -1,23 +1,25 @@
 <!doctype html>
 <html lang="en">
   <head>
-
     <script>
-  // Default: dark. Only use light if the user explicitly chose it.
-  const stored = localStorage.getItem('theme');
-  if (stored === 'light') {
-    document.documentElement.classList.remove('dark');
-  } else {
-    document.documentElement.classList.add('dark');
-    localStorage.setItem('theme', 'dark'); // persist default
-  }
-</script>
-
-
+      const stored = localStorage.getItem('theme');
+      if (stored === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark'); 
+      }
+    </script>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/public/img/logo.png" />
+    <link rel="icon" type="image/png" href="/img/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Duneth Widanapathirana</title>
+    
+    <title>Duneth Widanapathirana | Networking, Cybersecurity & Automation Portfolio</title>
+    <meta name="description" content="IT undergraduate specializing in networking, cybersecurity, and infrastructure automation projects using Python, Linux, and Cisco technologies." />
+    
+    <meta property="og:title" content="Duneth Widanapathirana | Networking & Automation Portfolio" />
+    <meta property="og:description" content="IT undergraduate specializing in networking, cybersecurity, and infrastructure automation projects." />
+    <meta property="og:type" content="website" />
   </head>
   <body>
     <div id="root"></div>

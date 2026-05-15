@@ -1,73 +1,41 @@
-import { Network, Shield, GraduationCap } from "lucide-react";
-import cvFile from "../assets/cv.pdf";
-
 export const AboutSection = () => {
-    return <section id="about" className="py-24 px-4 relative mb-70 pt-40">
-        {" "}
-        <div className="container mx-auto max-w-5xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-                About <span className="text-primary">Me</span>
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div className="space-y-6">
-                    <h3 className="text-2xl font-semibold">
-                        A Growing Networking Professional with a Passion for Secure Infrastructure
-                    </h3>
-                    <p className="text-muted-foreground">
-                        I’m a second-year Computer Networking student at SLIIT City University, pursuing my BSc (Hons) from the University of Bedfordshire. I’m passionate about building secure and efficient network infrastructures and learning how technology connects people across the world.
-                    </p>
-
-                    <p className="text-muted-foreground">
-                        I enjoy working with tools like Cisco Packet Tracer, Wireshark, and GNS3 to design, simulate, and troubleshoot networks. My goal is to gain real-world experience through an internship and grow into a confident, industry-ready network engineer.
-                    </p>
-
-                    <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-                        <a href="#contact" className="cosmic-button">{" "}Get inTouch</a>
-                        <a href={cvFile} target="_blank" rel="noopener noreferrer" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300">{" "}Download CV</a>
-                    </div>
+    return (
+        <section id="about" className="py-24 px-4 relative bg-secondary/5">
+            <div className="container mx-auto max-w-5xl">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-bold">
+                        About <span className="text-primary">Me</span>
+                    </h2>
                 </div>
 
-                <div className="grid grid-cols-1 gap-6">
-                    <div className="gradient-border p=6 card-hover">
-                        <div className="flex items-center gap-4">
-                            <div className="p-3 rounded-full bg-primary/10">
-                                <Network className="h-6 w-6 text-primary" />
-                            </div>
-                            <div className="text-left">
-                                <h4 className="font-semibold text-lg">Network Design & Configuration</h4>
-                                <p className="text-muted-foreground text-sm pt-1">I create efficient network topologies using VLANs, routing, and switching to ensure reliable communication and performance.</p>
-                            </div>
+                <div className="bg-card p-8 md:p-12 rounded-3xl shadow-sm border border-border">
+                    <p className="text-lg text-foreground/90 leading-relaxed mb-6">
+                        I am an IT undergraduate passionate about networking, cybersecurity, and infrastructure automation. My interests include network design, system security, Linux environments, and automating repetitive tasks using Python.
+                    </p>
+                    <p className="text-lg text-foreground/90 leading-relaxed mb-12">
+                        I enjoy building hands-on projects that combine networking concepts with security practices and automation workflows. Currently, I am expanding my knowledge in Cisco networking, Linux systems, and cybersecurity fundamentals while developing real-world projects.
+                    </p>
+
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 border-t border-border/50">
+                        <div className="text-center">
+                            <h4 className="text-3xl font-bold text-primary mb-2">Year 2</h4>
+                            <p className="text-sm text-muted-foreground font-medium">IT Undergraduate</p>
+                        </div>
+                        <div className="text-center">
+                            <h4 className="text-3xl font-bold text-primary mb-2">Active</h4>
+                            <p className="text-sm text-muted-foreground font-medium">Networking & Security Enthusiast</p>
+                        </div>
+                        <div className="text-center">
+                            <h4 className="text-3xl font-bold text-primary mb-2">Focused</h4>
+                            <p className="text-sm text-muted-foreground font-medium">Python Automation Learner</p>
+                        </div>
+                        <div className="text-center">
+                            <h4 className="text-3xl font-bold text-primary mb-2">Hands-on</h4>
+                            <p className="text-sm text-muted-foreground font-medium">Cisco Packet Tracer Labs</p>
                         </div>
                     </div>
-
-                    <div className="gradient-border p=6 card-hover">
-                        <div className="flex items-center gap-4">
-                            <div className="p-3 rounded-full bg-primary/10">
-                                <Shield className="h-6 w-6 text-primary" />
-                            </div>
-                            <div className="text-left">
-                                <h4 className="font-semibold text-lg">Network Security</h4>
-                                <p className="text-muted-foreground text-sm pt-1">I apply ACLs, port security, and monitoring tools like Wireshark to protect networks and maintain secure data flow..</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="gradient-border p=6 card-hover">
-                        <div className="flex items-center gap-4 ">
-                            <div className="p-3 rounded-full bg-primary/10">
-                                <GraduationCap className="h-6 w-6 text-primary" />
-                            </div>
-                            <div className="text-left">
-                                <h4 className="font-semibold text-lg">Continuous Learning</h4>
-                                <p className="text-muted-foreground text-sm pt-1">I constantly explore new tools and technologies to stay updated and improve my network engineering skills.</p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-
-        </div>
-    </section>;
+        </section>
+    );
 };

@@ -5,34 +5,29 @@ import { HeroSection } from "../components/HeroSection";
 import { AboutSection } from "../components/AboutSection";
 import { SkillsSection } from "../components/SkillsSection";
 import { ProjectsSection } from "../components/ProjectsSection";
+import { GithubSection } from "../components/GithubSection";
+import { ResumeSection } from "../components/ResumeSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
-import cvFile from "../assets/cv.pdf";
 
 export const Home = () => {
-  return <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+  return (
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden font-sans">
+      <ThemeToggle />
+      <StarBackground />
+      <Navbar />
 
-    {/* Theme Toggle */}
-    <ThemeToggle />
+      <main>
+          <HeroSection />
+          <AboutSection />
+          <SkillsSection />
+          <ProjectsSection />
+          <GithubSection />
+          <ResumeSection />
+          <ContactSection />
+      </main>
 
-    {/* Background Effects */}
-    <StarBackground />
-
-    {/* Navbar */}
-    <Navbar />
-
-    {/* Main Content */}
-    <main>
-        <HeroSection />
-        <AboutSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <ContactSection />
-    </main>
-
-    {/* Footer */}
-    <Footer />
-
-  </div>;
-
+      <Footer />
+    </div>
+  );
 };
