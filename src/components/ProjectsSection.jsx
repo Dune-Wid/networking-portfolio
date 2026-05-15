@@ -45,7 +45,7 @@ export const ProjectsSection = () => {
                             
                             {/* Placeholder for Technical Visual / Diagram */}
                             <div className="h-48 relative bg-secondary/20 flex flex-col items-center justify-center border-b border-border p-4">
-                                <div className="absolute top-4 right-4 px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full border flex items-center gap-1.5 z-10 bg-background/80 backdrop-blur-sm ${project.statusColor}">
+                                <div className={`absolute top-4 right-4 px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full border flex items-center gap-1.5 z-10 bg-background/80 backdrop-blur-sm ${project.statusColor}`}>
                                    <div className={`w-1.5 h-1.5 rounded-full ${project.statusColor.split(' ')[0].replace('text-', 'bg-')}`}></div> 
                                    <span className={project.statusColor.split(' ')[0]}>{project.status}</span>
                                 </div>
@@ -66,9 +66,9 @@ export const ProjectsSection = () => {
                                 </div>
 
                                 <div className="flex gap-3 pt-5 border-t border-border/50">
-                                    <button className="flex-1 inline-flex items-center justify-center gap-2 text-xs font-bold bg-secondary/50 hover:bg-secondary py-2.5 rounded-lg transition-colors border border-border">
+                                    <a href="https://github.com/Dune-Wid/" target="_blank" rel="noreferrer" className="flex-1 inline-flex items-center justify-center gap-2 text-xs font-bold bg-secondary/50 hover:bg-secondary py-2.5 rounded-lg transition-colors border border-border">
                                         <Github size={14} /> GitHub
-                                    </button>
+                                    </a>
                                     <button className="flex-1 inline-flex items-center justify-center gap-2 text-xs font-bold text-primary hover:bg-primary/10 py-2.5 rounded-lg transition-colors border border-primary/20">
                                         <FileText size={14} /> Case Study
                                     </button>
