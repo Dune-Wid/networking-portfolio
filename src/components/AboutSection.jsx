@@ -1,38 +1,45 @@
+import { Network, ShieldCheck, Terminal, Server, Activity } from "lucide-react";
+
 export const AboutSection = () => {
+    const focusAreas = [
+        { name: "Network Infrastructure", icon: Network },
+        { name: "Cybersecurity Fundamentals", icon: ShieldCheck },
+        { name: "Python Automation", icon: Terminal },
+        { name: "Linux Systems", icon: Server },
+        { name: "Network Monitoring", icon: Activity }
+    ];
+
     return (
-        <section id="about" className="py-24 px-4 relative bg-secondary/5">
-            <div className="container mx-auto max-w-5xl">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold">
-                        About <span className="text-primary">Me</span>
-                    </h2>
+        <section id="about" className="py-24 px-6 relative bg-secondary/5 border-y border-border/50">
+            <div className="container mx-auto max-w-4xl">
+                <div className="mb-12">
+                    <h2 className="text-3xl font-bold tracking-tight mb-2">About <span className="text-primary">Me</span></h2>
+                    <div className="h-1 w-12 bg-primary rounded-full"></div>
                 </div>
 
-                <div className="bg-card p-8 md:p-12 rounded-3xl shadow-sm border border-border">
-                    <p className="text-lg text-foreground/90 leading-relaxed mb-6">
-                        I am an IT undergraduate passionate about networking, cybersecurity, and infrastructure automation. My interests include network design, system security, Linux environments, and automating repetitive tasks using Python.
+                <div className="space-y-6 text-lg text-foreground/80 leading-relaxed font-medium">
+                    <p>
+                        I am an IT undergraduate passionate about networking, cybersecurity, and infrastructure automation. My interests include network design, Linux systems, security fundamentals, and automating repetitive infrastructure tasks using Python.
                     </p>
-                    <p className="text-lg text-foreground/90 leading-relaxed mb-12">
-                        I enjoy building hands-on projects that combine networking concepts with security practices and automation workflows. Currently, I am expanding my knowledge in Cisco networking, Linux systems, and cybersecurity fundamentals while developing real-world projects.
+                    <p>
+                        I enjoy building hands-on projects that combine networking concepts with security practices and automation workflows. Currently, I am strengthening my knowledge in Cisco networking, Linux environments, and cybersecurity fundamentals while developing practical technical projects.
                     </p>
+                </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 border-t border-border/50">
-                        <div className="text-center">
-                            <h4 className="text-3xl font-bold text-primary mb-2">Year 2</h4>
-                            <p className="text-sm text-muted-foreground font-medium">IT Undergraduate</p>
-                        </div>
-                        <div className="text-center">
-                            <h4 className="text-3xl font-bold text-primary mb-2">Active</h4>
-                            <p className="text-sm text-muted-foreground font-medium">Networking & Security Enthusiast</p>
-                        </div>
-                        <div className="text-center">
-                            <h4 className="text-3xl font-bold text-primary mb-2">Focused</h4>
-                            <p className="text-sm text-muted-foreground font-medium">Python Automation Learner</p>
-                        </div>
-                        <div className="text-center">
-                            <h4 className="text-3xl font-bold text-primary mb-2">Hands-on</h4>
-                            <p className="text-sm text-muted-foreground font-medium">Cisco Packet Tracer Labs</p>
-                        </div>
+                <div className="mt-16 pt-10 border-t border-border">
+                    <h3 className="text-sm font-mono uppercase tracking-[0.15em] text-muted-foreground mb-6">Focus Areas</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        {focusAreas.map((area, idx) => {
+                            const Icon = area.icon;
+                            return (
+                                <div key={idx} className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border/60 hover:border-primary/40 transition-colors shadow-sm">
+                                    <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                                        <Icon className="h-5 w-5" />
+                                    </div>
+                                    <span className="font-semibold text-sm">{area.name}</span>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
