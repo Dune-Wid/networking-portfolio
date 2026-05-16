@@ -52,9 +52,9 @@ export const ProjectsSection = () => {
                             {/* Technical Visual / Diagram */}
                             <div className="h-48 relative bg-secondary/20 flex flex-col items-center justify-center border-b border-border p-0 overflow-hidden">
                                 <div className={`absolute top-4 right-4 px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full border flex items-center gap-1.5 z-10 bg-background/80 backdrop-blur-sm ${project.statusColor}`}>
-                                   <div className={`w-1.5 h-1.5 rounded-full ${project.statusColor.split(' ')[0].replace('text-', 'bg-')}`}></div> 
-                                   <span className={project.statusColor.split(' ')[0]}>{project.status}</span>
-                                </div>
+                                <div className="w-1.5 h-1.5 rounded-full bg-current"></div> 
+                                <span>{project.status}</span>
+                            </div>
                                 
                                 {project.image ? (
                                     <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
