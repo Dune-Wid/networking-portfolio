@@ -13,13 +13,13 @@ const projects = [
     },
     {
         id: 2,
-        title: "Secure Office Network Design",
-        description: "Designed and simulated a segmented office network with VLANs, ACLs, DHCP, DNS, and secure remote management practices.",
-        status: "Lab Project",
-        statusColor: "text-emerald-500 bg-emerald-500/10 border-emerald-500/20",
+        title: "Secure Enterprise Headquarters Architecture",
+        description: "Designed a highly secure corporate network featuring Zero-Trust micro-segmentation, Edge Anti-Spoofing ACLs, a public DMZ, and automated NetDevOps management via Python.",
+        status: "Completed",
+        statusColor: "text-green-500 bg-green-500/10 border-green-500/20",
         image: "/projects/prj2.png",
-        githubUrl: "https://github.com/Dune-Wid/secure-office-network.git",
-        tech: ["Cisco Packet Tracer", "VLANs", "Networking", "ACLs", "Security"]
+        githubUrl: "https://github.com/Dune-Wid/secure-enterprise-architecture.git",
+        tech: ["Packet Tracer", "Zero-Trust", "NAT/PAT", "ACLs", "Python"]
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ const projects = [
         description: "Python-based network scanning tool that identifies active hosts, open ports, and basic security risks within a simulated environment.",
         status: "Planned Project",
         statusColor: "text-blue-500 bg-blue-500/10 border-blue-500/20",
-        image: "/projects/prj3.png",
+        image: "/projects/prj3.jpg",
         githubUrl: "https://github.com/Dune-Wid/network-vulnerability-scanner.git",
         tech: ["Python", "Nmap", "Linux", "Cybersecurity"]
     }
