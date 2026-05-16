@@ -34,11 +34,11 @@ export const GithubSection = () => {
                                 url: "https://github.com/Dune-Wid/network-config-backup.git"
                             },
                             { 
-                                name: "ccna-packet-tracer-labs", 
-                                desc: "Simulations of segmented office network designs and security policies.", 
+                                name: "Secure Enterprise Headquarters Architecture", 
+                                desc: "Designed a segmented, Zero-Trust corporate network with advanced edge security and Python-automated NetDevOps.", 
                                 lang: "Cisco PT",
                                 color: "bg-emerald-500",
-                                url: "https://github.com/Dune-Wid" // We can update this when you build your next project!
+                                url: "https://github.com/Dune-Wid/secure-enterprise-architecture.git" // We can update this when you build your next project!
                             }
                         ].map((repo, i) => (
                             <a key={i} href={repo.url} target="_blank" rel="noreferrer" className="block p-5 rounded-xl border border-border/60 bg-card hover:border-primary/50 transition-colors shadow-sm group hover:-translate-y-1 duration-300">
