@@ -30,7 +30,7 @@ export const Navbar = () => {
       )}
     >
       <div className="container mx-auto px-6 flex items-center justify-between max-w-6xl">
-        <a className="text-xl font-bold text-primary flex items-center tracking-tight" href="#hero">
+        <a className="text-xl font-bold text-primary flex items-center tracking-tight" href="/">
           <span className="relative z-10 tracking-tighter">
             <span className="text-foreground">D</span>W
           </span>
