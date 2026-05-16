@@ -87,20 +87,20 @@ export const ContactSection = () => {
                                     <label htmlFor="name" className="block text-sm font-semibold mb-2 text-foreground/80">Full Name</label>
                                     <input type="text" id="name" name="name" required
                                         className="w-full px-5 py-3.5 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow"
-                                        placeholder="John Doe"/>
+                                        placeholder="Enter your name"/>
                                 </div>
                                 <div>
                                     <label htmlFor="email" className="block text-sm font-semibold mb-2 text-foreground/80">Email Address</label>
                                     <input type="email" id="email" name="email" required
                                         className="w-full px-5 py-3.5 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow"
-                                        placeholder="john@example.com"/>
+                                        placeholder="Enter your email"/>
                                 </div>
                             </div>
                             <div>
                                 <label htmlFor="message" className="block text-sm font-semibold mb-2 text-foreground/80">Message</label>
                                 <textarea id="message" name="message" required rows="5"
                                     className="w-full px-5 py-4 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none transition-shadow"
-                                    placeholder="Hello! I'd like to discuss an internship opportunity..."/>
+                                    placeholder="Enter your message here..."/>
                             </div>
                             <button type="submit" disabled={isSubmitting}
                                 className={cn("w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold flex items-center justify-center gap-2 transition-all shadow-md", 
