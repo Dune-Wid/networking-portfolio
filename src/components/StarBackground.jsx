@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
 
-// id, size, x, y, opacity, animationDuration
-// id, size, x, y, delay, animationDuration
-
 export const StarBackground = () => {
   const [stars, setStars] = useState([]);
   const [meteors, setMeteors] = useState([]);
@@ -11,8 +8,13 @@ export const StarBackground = () => {
     generateStars();
     generateMeteors();
 
+    let lastWidth = window.innerWidth;
+
     const handleResize = () => {
-      generateStars();
+      if (window.innerWidth !== lastWidth) {
+        generateStars();
+        lastWidth = window.innerWidth;
+      }
     };
 
     window.addEventListener("resize", handleResize);
@@ -52,7 +54,7 @@ export const StarBackground = () => {
         x: Math.random() * 100,
         y: Math.random() * 20,
         delay: Math.random() * 15,
-        animationDuration: Math.random() * 3 + 3,
+        animationDuration: Math.random() * 6 + 8,
       });
     }
 
@@ -79,13 +81,15 @@ export const StarBackground = () => {
       {meteors.map((meteor) => (
         <div
           key={meteor.id}
-          className="meteor animate-meteor"
+          /* Added opacity-0 here so they hide while waiting for the delay */
+          className="meteor animate-meteor opacity-0"
           style={{
             width: meteor.size * 15 + "px",
             height: meteor.size * 1 + "px",
             left: meteor.x + "%",
             top: meteor.y + "%",
-            animationDelay: meteor.delay,
+            /* Added the 's' to ensure the delay works properly */
+            animationDelay: meteor.delay + "s", 
             animationDuration: meteor.animationDuration + "s",
           }}
         />
