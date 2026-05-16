@@ -5,9 +5,11 @@ const projects = [
         id: 1,
         title: "Automated Network Configuration Backup System",
         description: "Python-based automation tool that securely connects to network devices using SSH and automatically backs up running configurations with timestamped storage.",
-        status: "In Development",
-        statusColor: "text-amber-500 bg-amber-500/10 border-amber-500/20",
-        tech: ["Python", "Netmiko", "Cisco", "SSH", "Automation"]
+        status: "Completed",
+        statusColor: "text-green-500 bg-green-500/10 border-green-500/20",
+        tech: ["Python", "Netmiko", "Cisco", "SSH", "Automation"],
+        image: "/projects/prj1.png",
+        githubUrl: "https://github.com/Dune-Wid/network-config-backup.git"
     },
     {
         id: 2,
@@ -15,6 +17,8 @@ const projects = [
         description: "Designed and simulated a segmented office network with VLANs, ACLs, DHCP, DNS, and secure remote management practices.",
         status: "Lab Project",
         statusColor: "text-emerald-500 bg-emerald-500/10 border-emerald-500/20",
+        image: "/projects/prj2.png",
+        githubUrl: "https://github.com/Dune-Wid/secure-office-network.git",
         tech: ["Cisco Packet Tracer", "VLANs", "Networking", "ACLs", "Security"]
     },
     {
@@ -23,6 +27,8 @@ const projects = [
         description: "Python-based network scanning tool that identifies active hosts, open ports, and basic security risks within a simulated environment.",
         status: "Planned Project",
         statusColor: "text-blue-500 bg-blue-500/10 border-blue-500/20",
+        image: "/projects/prj3.png",
+        githubUrl: "https://github.com/Dune-Wid/network-vulnerability-scanner.git",
         tech: ["Python", "Nmap", "Linux", "Cybersecurity"]
     }
 ];
@@ -43,14 +49,21 @@ export const ProjectsSection = () => {
                     {projects.map((project) => (
                         <div key={project.id} className="group flex flex-col bg-card rounded-2xl overflow-hidden border border-border/60 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 min-h-[440px]">
                             
-                            {/* Placeholder for Technical Visual / Diagram */}
-                            <div className="h-48 relative bg-secondary/20 flex flex-col items-center justify-center border-b border-border p-4">
+                            {/* Technical Visual / Diagram */}
+                            <div className="h-48 relative bg-secondary/20 flex flex-col items-center justify-center border-b border-border p-0 overflow-hidden">
                                 <div className={`absolute top-4 right-4 px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full border flex items-center gap-1.5 z-10 bg-background/80 backdrop-blur-sm ${project.statusColor}`}>
                                    <div className={`w-1.5 h-1.5 rounded-full ${project.statusColor.split(' ')[0].replace('text-', 'bg-')}`}></div> 
                                    <span className={project.statusColor.split(' ')[0]}>{project.status}</span>
                                 </div>
-                                <Activity className="h-12 w-12 text-muted-foreground/30 mb-2 group-hover:scale-110 transition-transform duration-500" />
-                                <span className="text-xs font-mono text-muted-foreground/50">Technical Diagram Placeholder</span>
+                                
+                                {project.image ? (
+                                    <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                ) : (
+                                    <div className="flex flex-col items-center p-4">
+                                        <Activity className="h-12 w-12 text-muted-foreground/30 mb-2 group-hover:scale-110 transition-transform duration-500" />
+                                        <span className="text-xs font-mono text-muted-foreground/50">Technical Diagram Placeholder</span>
+                                    </div>
+                                )}
                             </div>
 
                             <div className="p-8 flex flex-col flex-grow">
@@ -66,12 +79,12 @@ export const ProjectsSection = () => {
                                 </div>
 
                                 <div className="flex gap-3 pt-5 border-t border-border/50">
-                                    <a href="https://github.com/Dune-Wid/" target="_blank" rel="noreferrer" className="flex-1 inline-flex items-center justify-center gap-2 text-xs font-bold bg-secondary/50 hover:bg-secondary py-2.5 rounded-lg transition-colors border border-border">
+                                    <a href={project.githubUrl || "#"} target="_blank" rel="noreferrer" className="flex-1 inline-flex items-center justify-center gap-2 text-xs font-bold bg-secondary/50 hover:bg-secondary py-2.5 rounded-lg transition-colors border border-border">
                                         <Github size={14} /> GitHub
                                     </a>
-                                    <button className="flex-1 inline-flex items-center justify-center gap-2 text-xs font-bold text-primary hover:bg-primary/10 py-2.5 rounded-lg transition-colors border border-primary/20">
+                                    <a href={`${project.githubUrl}#readme`} target="_blank" rel="noreferrer" className="flex-1 inline-flex items-center justify-center gap-2 text-xs font-bold text-primary hover:bg-primary/10 py-2.5 rounded-lg transition-colors border border-primary/20">
                                         <FileText size={14} /> Case Study
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

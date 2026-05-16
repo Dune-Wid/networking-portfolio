@@ -24,14 +24,26 @@ export const GithubSection = () => {
                     </div>
                     
                     <div className="flex-1 w-full space-y-4">
-                        {/* Mock Repo Cards */}
+                        {/* Real Repo Cards */}
                         {[
-                            { name: "network-automation-scripts", desc: "Python tools for automated Cisco configuration.", lang: "Python" },
-                            { name: "ccna-packet-tracer-labs", desc: "Simulations of enterprise network designs.", lang: "Cisco PT" }
+                            { 
+                                name: "network-config-backup", 
+                                desc: "Python script using Netmiko to securely automate Cisco IOS configuration backups.", 
+                                lang: "Python",
+                                color: "bg-blue-500",
+                                url: "https://github.com/Dune-Wid/network-config-backup.git"
+                            },
+                            { 
+                                name: "ccna-packet-tracer-labs", 
+                                desc: "Simulations of segmented office network designs and security policies.", 
+                                lang: "Cisco PT",
+                                color: "bg-emerald-500",
+                                url: "https://github.com/Dune-Wid" // We can update this when you build your next project!
+                            }
                         ].map((repo, i) => (
-                            <div key={i} className="p-5 rounded-xl border border-border/60 bg-card hover:border-primary/50 transition-colors shadow-sm">
+                            <a key={i} href={repo.url} target="_blank" rel="noreferrer" className="block p-5 rounded-xl border border-border/60 bg-card hover:border-primary/50 transition-colors shadow-sm group hover:-translate-y-1 duration-300">
                                 <div className="flex justify-between items-start mb-2">
-                                    <h4 className="font-bold text-primary font-mono text-sm">{repo.name}</h4>
+                                    <h4 className="font-bold text-primary font-mono text-sm group-hover:underline">{repo.name}</h4>
                                     <div className="flex gap-3 text-xs text-muted-foreground">
                                         <span className="flex items-center gap-1"><Star size={12}/> 0</span>
                                         <span className="flex items-center gap-1"><GitFork size={12}/> 0</span>
@@ -39,10 +51,10 @@ export const GithubSection = () => {
                                 </div>
                                 <p className="text-sm text-muted-foreground mb-4">{repo.desc}</p>
                                 <div className="flex items-center gap-2">
-                                    <span className="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+                                    <span className={`w-2.5 h-2.5 rounded-full ${repo.color}`}></span>
                                     <span className="text-xs font-medium text-foreground/70">{repo.lang}</span>
                                 </div>
-                            </div>
+                            </a>
                         ))}
                     </div>
                 </div>
