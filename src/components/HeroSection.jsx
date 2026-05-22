@@ -1,5 +1,5 @@
 import { Download, Eye, Github } from "lucide-react";
-import cvFile from "../assets/Duneth_Widanapathirana_Resume.pdf";
+import cvFile from "../assets/W.P.D.I Sandaruwan_CV.pdf";
 
 export const HeroSection = () => {
     return (
