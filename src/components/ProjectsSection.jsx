@@ -26,8 +26,8 @@ const projects = [
         title: "Secure Multi-Site Enterprise Architecture",
         description: "Architected a highly secure corporate network featuring Zero-Trust micro-segmentation, IPsec Site-to-Site VPN tunnels, eBGP/OSPF dynamic routing, and centralized SDN management.",
         status: "Completed",
-        statusColor: "text-blue-500 bg-blue-500/10 border-blue-500/20",
-        image: "/projects/prj3.jpg",
+        statusColor: "text-green-500 bg-green-500/10 border-green-500/20",
+        image: "/projects/prj3.png",
         githubUrl: "https://github.com/Dune-Wid/Secure-Multi-Site-Enterprise-Network.git",
         tech: ["Packet Tracer", "OSPF/eBGP", "IPsec VPN", "Zero-Trust ACLs", "SDN"]
     }
