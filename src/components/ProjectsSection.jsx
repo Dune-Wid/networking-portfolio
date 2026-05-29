@@ -23,13 +23,13 @@ const projects = [
     },
     {
         id: 3,
-        title: "Network Vulnerability Scanner",
-        description: "Python-based network scanning tool that identifies active hosts, open ports, and basic security risks within a simulated environment.",
-        status: "Planned Project",
+        title: "Secure Multi-Site Enterprise Architecture",
+        description: "Architected a highly secure corporate network featuring Zero-Trust micro-segmentation, IPsec Site-to-Site VPN tunnels, eBGP/OSPF dynamic routing, and centralized SDN management.",
+        status: "Completed",
         statusColor: "text-blue-500 bg-blue-500/10 border-blue-500/20",
         image: "/projects/prj3.jpg",
-        githubUrl: "https://github.com/Dune-Wid/network-vulnerability-scanner.git",
-        tech: ["Python", "Nmap", "Linux", "Cybersecurity"]
+        githubUrl: "https://github.com/Dune-Wid/Secure-Multi-Site-Enterprise-Network.git",
+        tech: ["Packet Tracer", "OSPF/eBGP", "IPsec VPN", "Zero-Trust ACLs", "SDN"]
     }
 ];
 
