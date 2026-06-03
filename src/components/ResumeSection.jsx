@@ -1,5 +1,5 @@
 import { Download, FileText, GraduationCap, Award, Wrench, Briefcase } from "lucide-react";
-import cvFile from "../assets/W.P.D.I Sandaruwan_CV.pdf";
+import cvFile from "../assets/W.P.D.I (Duneth) Sandaruwan-CV.pdf";
 
 export const ResumeSection = () => {
     return (
