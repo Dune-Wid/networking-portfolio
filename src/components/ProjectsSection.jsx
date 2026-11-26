@@ -2,6 +2,17 @@ import { Github, FileText, Activity } from "lucide-react";
 
 const projects = [
     {
+        id: 4,
+        title: "Remote Warehouse Monitoring System",
+        description: "Built a Cisco Packet Tracer warehouse monitoring network with fire and intrusion IoT devices, local fog automation, dual leased-WAN paths, dynamic routing, HSRP failover and cellular cloud backup.",
+        status: "Completed",
+        statusColor: "text-green-500 bg-green-500/10 border-green-500/20",
+        image: "/projects/remote-warehouse-network.svg",
+        githubUrl: "https://github.com/Dune-Wid/networking-portfolio/tree/main/projects/remote-warehouse-monitoring",
+        caseStudyUrl: "https://github.com/Dune-Wid/networking-portfolio/blob/main/projects/remote-warehouse-monitoring/README.md",
+        tech: ["Packet Tracer", "IoT", "Fog Computing", "OSPF/BGP", "HSRP", "WAN Failover"]
+    },
+    {
         id: 1,
         title: "Automated Network Configuration Backup System",
         description: "Python-based automation tool that securely connects to network devices using SSH and automatically backs up running configurations with timestamped storage.",
@@ -45,7 +56,7 @@ export const ProjectsSection = () => {
                     <p className="text-muted-foreground text-md font-medium">Hands-on implementations in infrastructure and security.</p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {projects.map((project) => (
                         <div key={project.id} className="group flex flex-col bg-card rounded-2xl overflow-hidden border border-border/60 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 min-h-[440px]">
                             
@@ -82,7 +93,7 @@ export const ProjectsSection = () => {
                                     <a href={project.githubUrl || "#"} target="_blank" rel="noreferrer" className="flex-1 inline-flex items-center justify-center gap-2 text-xs font-bold bg-secondary/50 hover:bg-secondary py-2.5 rounded-lg transition-colors border border-border">
                                         <Github size={14} /> GitHub
                                     </a>
-                                    <a href={`${project.githubUrl}#readme`} target="_blank" rel="noreferrer" className="flex-1 inline-flex items-center justify-center gap-2 text-xs font-bold text-primary hover:bg-primary/10 py-2.5 rounded-lg transition-colors border border-primary/20">
+                                    <a href={project.caseStudyUrl || `${project.githubUrl}#readme`} target="_blank" rel="noreferrer" className="flex-1 inline-flex items-center justify-center gap-2 text-xs font-bold text-primary hover:bg-primary/10 py-2.5 rounded-lg transition-colors border border-primary/20">
                                         <FileText size={14} /> Case Study
                                     </a>
                                 </div>
