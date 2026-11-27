@@ -8,8 +8,8 @@ const projects = [
         status: "Completed",
         statusColor: "text-green-500 bg-green-500/10 border-green-500/20",
         image: "/projects/remote-warehouse-network.svg",
-        githubUrl: "https://github.com/Dune-Wid/networking-portfolio/tree/main/projects/remote-warehouse-monitoring",
-        caseStudyUrl: "https://github.com/Dune-Wid/networking-portfolio/blob/main/projects/remote-warehouse-monitoring/README.md",
+        githubUrl: "https://github.com/Dune-Wid/Remote-Warehouse-Monitoring-System",
+        caseStudyUrl: "https://github.com/Dune-Wid/Remote-Warehouse-Monitoring-System#readme",
         tech: ["Packet Tracer", "IoT", "Fog Computing", "OSPF/BGP", "HSRP", "WAN Failover"]
     },
     {
